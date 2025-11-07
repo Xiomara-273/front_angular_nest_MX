@@ -1,14 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { AuthRoutingModule } from './auth-routing-module';
 import { Login } from './components/login/login';
 import { Register } from './componets/register/register';
+
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Auth } from './services/auth';
 
 
 @NgModule({
+
+  providers:[
+    Auth
+  ],
   declarations: [
     Login,
     Register
